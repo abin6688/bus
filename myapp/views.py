@@ -86,7 +86,7 @@ def cancellings(request):
             rem_r = bus.rem + book.nos
             Bus.objects.filter(id=book.busid).update(rem=rem_r)
             #nos_r = book.nos - seats_r
-            Book.objects.filter(id=id_r).update(status='CANCELLED')
+            Book.objects.filter(id=id_r).update(status='C')
             Book.objects.filter(id=id_r).update(nos=0)
             return redirect(seebookings)
         except Book.DoesNotExist:

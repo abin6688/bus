@@ -36,10 +36,10 @@
     {% endfor %}
 </table>
 <form action="{% url 'cancellings' %}" method="post">
-    <h3>Choose bus to book</h3>
+    <h3>Enter Booking ID to Cancel</h3>
     {% csrf_token %}
     <div class="col-auto">
-        <label for="example-email-input" class="col-2 col-form-label">Bus ID</label>
+        <label for="example-email-input" class="col-2 col-form-label">Booking ID</label>
         <div class="col-5">
             <input name='bus_id' class="form-control" type="number" id="example-email-input">
         </div>
